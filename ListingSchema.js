@@ -23,7 +23,7 @@ var listingSchema = new Schema({
 listingSchema.pre('save', function(next) {
   /* your code here */
   var currentDate = new Date();
-  //adds updated_at
+  //adds updated_at and updates every call
   this.updated_at = currentDate;
   //check if created_at is already there
   if (!this.created_at)
